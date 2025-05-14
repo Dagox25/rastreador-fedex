@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado del Rastreo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% if error %}
+            <h2>{{ error }}</h2>
+        {% else %}
+            <h2>Información del Paquete</h2>
+            <p><strong>Número de Rastreo:</strong> {{ tracking_number }}</p>
+            <p><strong>Estado:</strong> {{ status }}</p>
+            <p><strong>Ubicación:</strong> {{ location }}</p>
+            <p><strong>Última Actualización:</strong> {{ last_updated }}</p>
+        {% endif %}
+        <a href="/">Volver</a>
+    </div>
+</body>
+</html>

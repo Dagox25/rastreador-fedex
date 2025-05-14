@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rastreador de Paquetes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Rastreador de Paquetes</h1>
+        <form method="post">
+            <input type="text" name="tracking_number" placeholder="Ingresa tu número de rastreo" required>
+            <button type="submit">Rastrear</button>
+        </form>
+    </div>
+</body>
+</html>
